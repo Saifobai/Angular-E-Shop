@@ -1,0 +1,74 @@
+<div class="checkout-container">
+  <mat-card>
+    <h1>Checkout</h1>
+    <p class="order-message">{{ orderMessage }}</p>
+    <mat-card-content>
+      <h3>Add shipping details</h3>
+
+      <form #orderData="ngForm" (submit)="orderNow(orderData.value)">
+        <mat-form-field class="input-label-container">
+          <mat-label>email</mat-label>
+          <input
+            class="--input"
+            type="text"
+            matInput
+            ngModel
+            name="email"
+            #Email="ngModel"
+            required
+          />
+          <mat-error *ngIf="Email.invalid">enter your Eamil</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-label-container">
+          <mat-label>Address</mat-label>
+          <input
+            class="--input"
+            type="text"
+            matInput
+            ngModel
+            name="address"
+            #Address="ngModel"
+            required
+          />
+          <mat-error *ngIf="Address.invalid">enter your Address</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-label-container">
+          <mat-label>Contact</mat-label>
+          <input
+            class="--input"
+            type="text"
+            matInput
+            ngModel
+            name="contact"
+            #Contact="ngModel"
+            required
+          />
+          <mat-error *ngIf="Contact.invalid">enter your Contact</mat-error>
+        </mat-form-field>
+
+        <button
+          [disabled]="orderData.invalid"
+          type="submit"
+          mat-raised-button
+          color="accent"
+        >
+          Order now
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="payment">
+    <mat-card-content>
+      <h3>Total Amount : {{ totalPrice }}</h3>
+      <h1>Payment method :</h1>
+
+      <div class="payment-methods">
+        <a href="#"> <i class="fab fa-paypal"></i>Paypal</a>
+        <a href="#"> <i class="fab fa-paypal"></i>MasterCard</a>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

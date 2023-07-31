@@ -1,0 +1,37 @@
+<div class="orders-container">
+  <h1>My Orders</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Order</th>
+        <th>Order Id</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orderData">
+        <td>
+          <img
+            src="https://www.pngitem.com/pimgs/m/33-337386_gold-shopping-cart-png-transparent-png.png"
+            alt=""
+          />
+        </td>
+        <td>{{ order.id }}</td>
+        <td>{{ order.totalPrice }}</td>
+        <td>In progress</td>
+        <td>
+          <button
+            (click)="cancelOrder(order.id)"
+            mat-raised-button
+            color="accent"
+          >
+            Cancel
+          </button>
+        </td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,34 @@
+
+
+.product-container{
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 20px;
+}
+
+.update-product-message{
+    color: rgb(138, 205, 37);
+    text-align: center;
+    
+}
+
+
+form{
+
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    padding: 10px 10px;
+}
+
+.input-label-container{
+    height: 70px;
+    width: 350px;
+}
+button{
+   
+    display: flex;
+    justify-content: center;
+}

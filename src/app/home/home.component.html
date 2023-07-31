@@ -1,0 +1,50 @@
+<ngb-carousel *ngIf="popularProducts" class="custom-carousel">
+  <ng-template ngbSlide *ngFor="let product of popularProducts">
+    <div class="carousel-slide">
+      <div class="picsum-img-wrapper">
+        <a routerLink="/details/{{ product.id }}">
+          <img
+            [src]="product.image"
+            [alt]="product.name"
+            class="carousel-image"
+          />
+        </a>
+      </div>
+      <div class="carousel-caption">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>
+<div class="card-container">
+  <div class="card">
+    <h2 class="card-title">Latest Products</h2>
+    <div class="product-container">
+      <div class="product" *ngFor="let item of latestAddedProducts">
+        <div class="product-image-wrapper">
+          <img
+            src="{{ item.image }}"
+            alt="New Nokia Mobile"
+            class="product-image"
+          />
+        </div>
+        <div class="product-details">
+          <h6 class="product-name">{{ item.name }}</h6>
+          <div class="product-info">
+            <p>Price: {{ item.price }}</p>
+            <p>Color: {{ item.color }}</p>
+          </div>
+        </div>
+        <div class="product-actions">
+          <a routerLink="details/{{ item.id }}" class="product-link"
+            >View Details</a
+          >
+          <a href="#" class="product-link">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Repeat the above card markup for the remaining cards -->
+</div>

@@ -1,0 +1,60 @@
+<div class="signup-container">
+  <div class="card">
+    <mat-card>
+      <h2>Sign Up</h2>
+      <mat-card-content>
+        <form (submit)="signUp(sellerForm.value)" #sellerForm="ngForm">
+          <mat-form-field class="input-label-container">
+            <mat-label>Your Name</mat-label>
+            <input
+              class="--input"
+              type="text"
+              matInput
+              ngModel
+              name="name"
+              #Name="ngModel"
+              required
+            />
+            <mat-error *ngIf="Name.invalid">Please enter a Name</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="input-label-container">
+            <mat-label>Password</mat-label>
+            <input
+              class="--input"
+              type="password"
+              matInput
+              ngModel
+              name="password"
+              #Password="ngModel"
+              required
+            />
+            <mat-error *ngIf="Password.invalid"
+              >Please enter a Password</mat-error
+            >
+          </mat-form-field>
+
+          <mat-form-field class="input-label-container">
+            <mat-label>Email</mat-label>
+            <input
+              class="--input"
+              type="email"
+              matInput
+              ngModel
+              name="email"
+              #Email="ngModel"
+              required
+            />
+            <mat-error *ngIf="Email.invalid">Please enter an Email</mat-error>
+          </mat-form-field>
+          <div class="card-footer">
+            <button type="submit" mat-raised-button color="primary">
+              Signup
+            </button>
+            <a routerLink="/login">already have an acoount Click to login</a>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

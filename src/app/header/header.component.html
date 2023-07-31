@@ -1,0 +1,69 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a class="home-logo" routerLink="/">
+      <img src="../../assets/home-logo.png" alt="logo" />
+    </a>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="toolbar-container">
+    <div class="form-input-search">
+      <input
+        type="text"
+        (keyup)="searchProdcuts($event)"
+        placeholder="Search for products"
+        (blur)="hideSearch()"
+        #searchInput
+      />
+
+      <button
+        (click)="searchInputSubmit(searchInput.value)"
+        mat-raised-button
+        color="accent"
+      >
+        Search
+      </button>
+
+      <ul class="suggested-result" *ngIf="searchFilterResulte">
+        <li *ngFor="let item of searchFilterResulte">
+          <a (mousedown)="redirectToDetails(item.id)">{{ item.name }} </a>
+        </li>
+      </ul>
+    </div>
+    <div class="links-list" [ngSwitch]="menuType">
+      <ul *ngSwitchCase="'default'">
+        <li><a routerLink="/seller-auth">Seller</a></li>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/user-auth">Login/Signup</a></li>
+        <li>
+          <a href="#"><i class="fa fa-shopping-cart"></i>({{ cartItems }})</a>
+        </li>
+      </ul>
+
+      <ul class="user-case-login" *ngSwitchCase="'user'">
+        <li><a routerLink="/seller-auth">Seller</a></li>
+        <li><a routerLink="/">Home</a></li>
+
+        <li>
+          <a routerLink="/user-auth">{{ userName | titlecase }} </a>
+        </li>
+
+        <li><a routerLink="/orders">MyOrders</a></li>
+
+        <li><a (click)="userLogout()">Logout</a></li>
+        <li>
+          <a [routerLink]="cartItems > 0 ? 'cart-page' : null"
+            ><i class="fa fa-shopping-cart"></i>({{ cartItems }})</a
+          >
+        </li>
+      </ul>
+
+      <ul class="seller-case-login" *ngSwitchCase="'seller'">
+        <li><a routerLink="/seller-add-product">Add Product</a></li>
+        <li><a routerLink="/seller-home">List</a></li>
+        <li><a (click)="logOut()">logout</a></li>
+        <li>
+          <a>{{ sellerName | titlecase }}</a>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

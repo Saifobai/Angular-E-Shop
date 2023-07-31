@@ -1,0 +1,148 @@
+{
+  "seller": [
+    {
+      "name": "seller1",
+      "email": "user1@email.com",
+      "password": "test123",
+      "id": 1
+    },
+    {
+      "name": "seller2",
+      "email": "seller2@email.com",
+      "password": "test123",
+      "id": 2
+    },
+    {
+      "name": "seller3",
+      "password": "test123",
+      "email": "seller3@email.com",
+      "id": 3
+    },
+    {
+      "name": "seller4",
+      "password": "test123",
+      "email": "seller4@email.com",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "name": "Nike",
+      "price": "200",
+      "color": "White-red",
+      "category": "Sneakers",
+      "description": "new and good",
+      "image": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/bde46d4f-fad2-4409-ab67-8d7a73e80cf7/air-force-1-low-true-white-and-deep-forest-fb9128-100-%E2%80%93-erscheinungsdatum.jpg",
+      "id": 2
+    },
+    {
+      "name": "macbook pro",
+      "price": "3000",
+      "color": "silver",
+      "category": "Laptp",
+      "description": "new m2",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp14-spacegray-select-202301?wid=4000&hei=2422&fmt=jpeg&qlt=90&.v=1671304673229",
+      "id": 3
+    },
+    {
+      "name": "sony",
+      "price": "800",
+      "color": "black",
+      "category": "Mobile",
+      "description": "new design",
+      "image": "https://m.media-amazon.com/images/I/71EB0tIGRSS._AC_UF894,1000_QL80_.jpg",
+      "id": 4
+    },
+    {
+      "name": "Jeans",
+      "price": "100",
+      "color": "Blue",
+      "category": "Clothes",
+      "description": "look like dirty",
+      "image": "https://d3agevowm6qqva.cloudfront.net/production/image/9557/grande_SN1389PN_ExodusLight_16703.jpg",
+      "id": 5
+    },
+    {
+      "name": "Apple watch",
+      "price": "500€",
+      "color": "silver",
+      "category": "Smart watch",
+      "description": "New Apple watch with new features",
+      "image": "https://m.media-amazon.com/images/I/71+FrNJ61dL._AC_UF1000,1000_QL80_.jpg",
+      "id": 6
+    },
+    {
+      "name": "Samsung gear",
+      "price": "400€",
+      "color": "black",
+      "category": "Samrt watch",
+      "description": "new samsung smart watch",
+      "image": "https://m.media-amazon.com/images/I/71SFgqisjCL._AC_UF1000,1000_QL80_.jpg",
+      "id": 7
+    },
+    {
+      "name": "Elctro Bike",
+      "price": "1200€",
+      "color": "black",
+      "category": "Bikes",
+      "description": "new electro bike",
+      "image": "https://cdn.fahrrad-xxl.de/media/pimg/068/thumbs/1640087_10265085.jpg",
+      "id": 8
+    },
+    {
+      "name": "Electro scooter",
+      "price": "850€",
+      "color": "black",
+      "category": "Electro scooter",
+      "description": "new model with cool features",
+      "image": "https://cdn.webshopapp.com/shops/297589/files/348122333/anlen-e9x-escooter.jpg",
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "name": "dean",
+      "email": "dean@email.com",
+      "password": "test123",
+      "id": 1
+    },
+    {
+      "name": "leo",
+      "email": "leo@email.com",
+      "password": "test123",
+      "id": 2
+    }
+  ],
+  "cart": [
+    {
+      "name": "Nike",
+      "price": "200",
+      "color": "White-red",
+      "category": "Sneakers",
+      "description": "new and good",
+      "image": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/bde46d4f-fad2-4409-ab67-8d7a73e80cf7/air-force-1-low-true-white-and-deep-forest-fb9128-100-%E2%80%93-erscheinungsdatum.jpg",
+      "quantity": 1,
+      "userId": 2,
+      "productId": 2,
+      "id": 1
+    }
+  ],
+  "orders": [
+    {
+      "email": "user1@email.com",
+      "address": "montana",
+      "contact": "868668686",
+      "totalPrice": 5700,
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "email": "user1@email.com",
+      "address": "mon",
+      "contact": "07707077",
+      "totalPrice": 5700,
+      "userId": 2,
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+<div class="product-container">
+  <mat-card>
+    <h2>Update product</h2>
+    <p class="update-product-message">{{ updateProductMessage }}</p>
+
+    <mat-card-content>
+      <form #formPost="ngForm" (submit)="onUpdateProduct(formPost.value)">
+        <mat-form-field class="input-label-container">
+          <mat-label>name</mat-label>
+          <input
+            class="--input"
+            type="text"
+            matInput
+            ngModel="{{ productData?.name }}"
+            name="name"
+            required
+          />
+          <!-- <mat-error *ngIf="Name.invalid">enter your product name</mat-error> -->
+        </mat-form-field>
+
+        <mat-form-field class="input-label-container">
+          <mat-label>price</mat-label>
+          <input
+            class="--input"
+            type="text"
+            matInput
+            ngModel="{{ productData?.price }}"
+            name="price"
+            #Price="ngModel"
+            required
+          />
+          <!-- <mat-error *ngIf="Price.invalid">enter your product name</mat-error> -->
+        </mat-form-field>
+
+        <mat-form-field class="input-label-container">
+          <mat-label>Color</mat-label>
+          <input
+            class="--input"
+            type="text"
+            matInput
+            ngModel="{{ productData?.color }}"
+            name="color"
+            #Color="ngModel"
+            required
+          />
+          <!-- <mat-error *ngIf="Color.invalid">enter your product name</mat-error> -->
+        </mat-form-field>
+
+        <mat-form-field class="input-label-container">
+          <mat-label>Category</mat-label>
+          <input
+            class="--input"
+            type="text"
+            matInput
+            ngModel="{{ productData?.category }}"
+            name="category"
+            #Category="ngModel"
+            required
+          />
+          <!-- <mat-error *ngIf="Category.invalid"
+            >enter your product name</mat-error
+          > -->
+        </mat-form-field>
+
+        <mat-form-field class="input-label-container">
+          <mat-label>Description</mat-label>
+          <input
+            class="--input"
+            type="text"
+            matInput
+            ngModel="{{ productData?.description }}"
+            name="description"
+            #Description="ngModel"
+            required
+          />
+          <!-- <mat-error *ngIf="Description.invalid"
+            >enter your product name</mat-error
+          > -->
+        </mat-form-field>
+
+        <mat-form-field class="input-label-container">
+          <mat-label>enter image url</mat-label>
+          <input
+            class="--input"
+            type="text"
+            matInput
+            ngModel="{{ productData?.image }}"
+            name="image"
+            #Image="ngModel"
+            required
+          />
+          <!-- <mat-error *ngIf="Image.invalid">enter your product name</mat-error> -->
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="accent">
+          Update product
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

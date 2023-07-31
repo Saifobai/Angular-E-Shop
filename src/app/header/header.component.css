@@ -1,0 +1,91 @@
+
+
+ul{
+    list-style-type: none;
+}
+
+
+
+
+.toolbar-container{
+
+display: flex;
+width: 100%;
+
+justify-content: space-around;
+
+}
+.links-list ul{
+    display: flex;
+    margin: 2px;
+}
+.links-list ul li{
+    margin: 0 5px;
+}
+.links-list a{
+    
+    color: white;
+    text-decoration: none;
+}
+
+.links-list a:hover{
+    color: #cbd0f1;
+}
+
+
+input[type="text"]{
+    height: 36px;
+    width: 250px;   
+}
+
+button{
+    margin-top: -3px;
+}
+
+/* -------SELLER CASE LOGIN-------------------- */
+/* .seller-case-login{
+
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    
+} */
+
+.user-case-login{
+    cursor: pointer;
+}
+/* ---------------------------- */
+
+.suggested-result{
+    position: absolute;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #eee;
+    width: 200px;
+    
+    
+
+}
+
+.suggested-result li{
+    border: 1px solid #cbd0f1;
+    padding: 5px;
+}
+.suggested-result li a{
+    cursor: pointer;
+    color: lightblue;
+}
+
+.home-logo{
+
+    margin-left: 20px;
+    margin-top: 15px;
+
+
+}
+
+.home-logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
